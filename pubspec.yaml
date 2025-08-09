@@ -11,12 +11,34 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_bloc: ^9.1.1
   cupertino_icons: ^1.0.8
+  flutter_animate: ^4.5.2
+  flutter_launcher_icons: ^0.13.1
+  loading_animation_widget: ^1.3.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^5.0.0
 
+flutter_launcher_icons:
+  ios: true
+  android: true
+  image_path: "assets/icons/launcher.png"
+
 flutter:
   uses-material-design: true
+
+  assets:
+    - assets/
+    - assets/icons/
+    - assets/images/
+
+  fonts:
+    - family: Arabic
+      fonts:
+        - asset: fonts/arabic/arabic.ttf
+    - family: Number
+      fonts:
+        - asset: fonts/number/number.ttf
