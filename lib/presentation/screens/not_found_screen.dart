@@ -18,14 +18,9 @@ class NotFoundScreen extends StatelessWidget {
           width: double.infinity,
           height: double.infinity,
           decoration: BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage(
-                isDark ? AppAssets.backgroundDarkImage : AppAssets.backgroundLightImage,
-              ),
-              fit: BoxFit.cover,
-            ),
+            image: DecorationImage(image: AssetImage(isDark ? AppAssets.backgroundDark : AppAssets.backgroundLight), fit: BoxFit.cover),
           ),
-          padding: 15.edgeInsetsAll,
+          padding: 10.edgeInsetsAll,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -35,27 +30,15 @@ class NotFoundScreen extends StatelessWidget {
                   children: [
                     TextSpan(
                       text: "4 ",
-                      style: TextStyle(
-                        fontSize: AppFonts.max,
-                        fontFamily: AppFonts.number,
-                        color: isDark ? AppColors.whiteColor : AppColors.greenColor,
-                      ),
+                      style: TextStyle(fontSize: AppFonts.max, fontFamily: AppFonts.number, color: isDark ? AppColors.whiteColor : AppColors.greenColor),
                     ),
                     TextSpan(
                       text: "0",
-                      style: TextStyle(
-                        fontSize: AppFonts.max,
-                        fontFamily: AppFonts.number,
-                        color: AppColors.yellowColor,
-                      ),
+                      style: TextStyle(fontSize: AppFonts.max, fontFamily: AppFonts.number, color: AppColors.yellowColor),
                     ),
                     TextSpan(
                       text: " 4",
-                      style: TextStyle(
-                        fontSize: AppFonts.max,
-                        fontFamily: AppFonts.number,
-                        color: isDark ? AppColors.whiteColor : AppColors.greenColor,
-                      ),
+                      style: TextStyle(fontSize: AppFonts.max, fontFamily: AppFonts.number, color: isDark ? AppColors.whiteColor : AppColors.greenColor),
                     ),
                   ],
                 ),
@@ -63,12 +46,9 @@ class NotFoundScreen extends StatelessWidget {
               20.gap,
               Text(
                 AppStrings.pageNotFound,
-                style: TextStyle(
-                  fontSize: AppFonts.h1,
-                  color: isDark ? AppColors.whiteColor : AppColors.greenColor,
-                ),
+                style: TextStyle(fontSize: AppFonts.h1, color: isDark ? AppColors.whiteColor : AppColors.greenColor),
               ),
-              15.gap,
+              10.gap,
               InkWell(
                 onTap: () {
                   Navigator.of(context).pop();
@@ -81,10 +61,7 @@ class NotFoundScreen extends StatelessWidget {
                   ),
                   child: Text(
                     AppStrings.back,
-                    style: TextStyle(
-                      fontSize: AppFonts.h2,
-                      color: isDark ? AppColors.whiteColor : AppColors.greenColor,
-                    ),
+                    style: TextStyle(fontSize: AppFonts.h2, color: isDark ? AppColors.whiteColor : AppColors.greenColor),
                   ),
                 ),
               ),

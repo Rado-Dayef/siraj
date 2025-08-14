@@ -2,6 +2,7 @@ import 'dart:ui';
 
 class AppFonts {
   /// Font Families
+  static const String quran = "Quran";
   static const String arabic = "Arabic";
   static const String number = "Number";
 

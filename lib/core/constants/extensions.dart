@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
 import 'package:siraj/core/theme/colors.dart';
 
@@ -63,5 +64,15 @@ extension NumExtension on num {
 
   Duration get micSec {
     return Duration(microseconds: toInt());
+  }
+}
+
+extension StringsExtension on String {
+  Future<bool?> get showToast {
+    return Fluttertoast.showToast(
+      msg: this,
+      textColor: AppColors.whiteColor,
+      backgroundColor: AppColors.yellowColor,
+    );
   }
 }

@@ -3,10 +3,12 @@ class AppAssets {
   static const String logoLight = "assets/logo_light.png";
 
   /// Images
-  static const String backgroundDarkImage = "assets/images/background_dark.png";
-  static const String backgroundLightImage = "assets/images/background_light.png";
+  static const String backgroundDark = "assets/images/background_dark.png";
+  static const String backgroundLight = "assets/images/background_light.png";
 
   /// Icons
-  static const String notFoundDarkIcon = "assets/icons/not_found_dark.png";
-  static const String notFoundLightIcon = "assets/icons/not_found_light.png";
+  static const String mosqueDark = "assets/icons/mosque_dark.png";
+  static const String mosqueLight = "assets/icons/mosque_light.png";
+  static const String notFoundDark = "assets/icons/not_found_dark.png";
+  static const String notFoundLight = "assets/icons/not_found_light.png";
 }
