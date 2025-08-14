@@ -8,10 +8,10 @@ final class PrayersLoading extends PrayersState {
 }
 
 final class PrayersSuccess extends PrayersState {
-  DateTime date;
-  List<PrayerModel> prayers;
-  String remainingForNextPrayer;
-  PrayerModel nextPrayer, currentPrayer;
+  final DateTime date;
+  final List<PrayerModel> prayers;
+  final String remainingForNextPrayer;
+  final PrayerModel nextPrayer, currentPrayer;
 
   PrayersSuccess({required this.date, required this.prayers, required this.nextPrayer, required this.currentPrayer, required this.remainingForNextPrayer});
 

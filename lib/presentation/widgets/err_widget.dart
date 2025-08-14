@@ -4,9 +4,10 @@ import 'package:siraj/core/theme/colors.dart';
 import 'package:siraj/core/theme/fonts.dart';
 
 class ErrWidget extends StatelessWidget {
+  final bool onlyIcon;
   final String message;
 
-  const ErrWidget({required this.message, super.key});
+  const ErrWidget({required this.message, this.onlyIcon = false, super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -18,15 +19,17 @@ class ErrWidget extends StatelessWidget {
           alignment: Alignment.center,
           child: Icon(Icons.warning_amber_rounded, color: AppColors.yellowColor, size: 50),
         ),
-        10.gap,
-        Align(
-          alignment: Alignment.center,
-          child: Text(
-            message,
-            textAlign: TextAlign.center,
-            style: TextStyle(fontSize: AppFonts.h2, color: color),
-          ),
-        ),
+        onlyIcon ? 0.gap : 10.gap,
+        onlyIcon
+            ? 0.gap
+            : Align(
+                alignment: Alignment.center,
+                child: Text(
+                  message,
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: AppFonts.h2, color: color),
+                ),
+              ),
       ],
     );
   }
