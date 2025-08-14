@@ -36,8 +36,6 @@ class AppStrings {
   static const String remaining = "متبقي";
   static const String september = "سبتمبر";
   static const String wednesday = "الأربعاء";
-  static const String startsFrom = "تبدأ من";
-  static const String endsWhen = "تنتهي عند";
   static const String adhanTime = "وقت الأذان";
   static const String iqamaTime = "وقت الإقامة";
   static const String welcomeTo = "مرحبا بك في";

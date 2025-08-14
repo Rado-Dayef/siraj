@@ -110,17 +110,17 @@ class PrayerScreen extends StatelessWidget {
                           children: [
                             Expanded(
                               child: TileWidget(
-                                prayer.isSunrise ? AppStrings.startsFrom : AppStrings.adhanTime,
+                                AppStrings.adhanTime,
                                 color: color,
                                 trailing: RichText(
                                   text: TextSpan(
                                     children: [
                                       TextSpan(
-                                        text: intl.DateFormat("hh:mm").format(prayer.time).toLowerCase(),
+                                        text: intl.DateFormat("hh:mm").format(prayer.adhan).toLowerCase(),
                                         style: TextStyle(color: color, fontFamily: AppFonts.number),
                                       ),
                                       TextSpan(
-                                        text: AppStrings.space + intl.DateFormat("a").format(prayer.time).toLowerCase().languageTranslator,
+                                        text: AppStrings.space + intl.DateFormat("a").format(prayer.adhan).toLowerCase().languageTranslator,
                                         style: TextStyle(fontSize: AppFonts.h4, fontFamily: AppFonts.arabic),
                                       ),
                                     ],
@@ -131,19 +131,17 @@ class PrayerScreen extends StatelessWidget {
                             10.gap,
                             Expanded(
                               child: TileWidget(
-                                prayer.isSunrise ? AppStrings.endsWhen : AppStrings.iqamaTime,
+                                AppStrings.iqamaTime,
                                 color: color,
                                 trailing: RichText(
                                   text: TextSpan(
                                     children: [
                                       TextSpan(
-                                        text: prayer.isSunrise ? intl.DateFormat("hh:mm").format(prayer.end!).toLowerCase() : intl.DateFormat("hh:mm").format(prayer.time.add(prayer.iqamahDelay.min)).toLowerCase(),
+                                        text: intl.DateFormat("hh:mm").format(prayer.adhan.add(prayer.iqamahDelay.min)).toLowerCase(),
                                         style: TextStyle(color: color, fontFamily: AppFonts.number),
                                       ),
                                       TextSpan(
-                                        text: prayer.isSunrise
-                                            ? AppStrings.space + intl.DateFormat("a").format(prayer.end!).toLowerCase().languageTranslator
-                                            : AppStrings.space + intl.DateFormat("a").format(prayer.time).toLowerCase().languageTranslator,
+                                        text: AppStrings.space + intl.DateFormat("a").format(prayer.adhan).toLowerCase().languageTranslator,
                                         style: TextStyle(fontSize: AppFonts.h4, fontFamily: AppFonts.arabic),
                                       ),
                                     ],
@@ -213,32 +211,30 @@ class PrayerScreen extends StatelessWidget {
                       ],
                     ),
                   ).animate().scale(end: Offset(1, 1), delay: 500.milSec, begin: Offset(0, 0), duration: 500.milSec),
-                  prayer.isSunrise ? 0.gap : 10.gap,
-                  prayer.isSunrise
-                      ? 0.gap
-                      : ContainerWidget(
-                          child: Column(
-                            children: [
-                              Text(
-                                AppStrings.azkar,
-                                style: TextStyle(fontSize: AppFonts.h1, fontFamily: AppFonts.arabic, color: color, fontWeight: AppFonts.bold),
-                              ),
-                              10.gap,
-                              ListView.separated(
-                                shrinkWrap: true,
-                                itemCount: prayer.azkar.length,
-                                physics: NeverScrollableScrollPhysics(),
-                                itemBuilder: (_, int index) {
-                                  PrayerZekrModel zekr = prayer.azkar[index];
-                                  return PrayerZekrWidget(zekr, color: color, prayerName: prayer.name, colorWithOpacity: colorWithOpacity);
-                                },
-                                separatorBuilder: (_, __) {
-                                  return Divider(height: 50, color: colorWithOpacity, indent: (MediaQuery.of(context).size.width - 60) / 4, endIndent: (MediaQuery.of(context).size.width - 60) / 4);
-                                },
-                              ),
-                            ],
-                          ),
-                        ).animate().scale(end: Offset(1, 1), delay: 500.milSec, begin: Offset(0, 0), duration: 500.milSec),
+                  10.gap,
+                  ContainerWidget(
+                    child: Column(
+                      children: [
+                        Text(
+                          AppStrings.azkar,
+                          style: TextStyle(fontSize: AppFonts.h1, fontFamily: AppFonts.arabic, color: color, fontWeight: AppFonts.bold),
+                        ),
+                        10.gap,
+                        ListView.separated(
+                          shrinkWrap: true,
+                          itemCount: prayer.azkar.length,
+                          physics: NeverScrollableScrollPhysics(),
+                          itemBuilder: (_, int index) {
+                            PrayerZekrModel zekr = prayer.azkar[index];
+                            return PrayerZekrWidget(zekr, color: color, prayerName: prayer.name, colorWithOpacity: colorWithOpacity);
+                          },
+                          separatorBuilder: (_, __) {
+                            return Divider(height: 50, color: colorWithOpacity, indent: (MediaQuery.of(context).size.width - 60) / 4, endIndent: (MediaQuery.of(context).size.width - 60) / 4);
+                          },
+                        ),
+                      ],
+                    ),
+                  ).animate().scale(end: Offset(1, 1), delay: 500.milSec, begin: Offset(0, 0), duration: 500.milSec),
                 ],
               ),
             ),
