@@ -11,7 +11,11 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  intl: ^0.20.2
+  geolocator: ^9.0.2
   flutter_bloc: ^9.1.1
+  fluttertoast: ^8.2.12
+  prayers_times: ^0.0.6
   cupertino_icons: ^1.0.8
   flutter_animate: ^4.5.2
   flutter_launcher_icons: ^0.13.1
@@ -31,6 +35,7 @@ flutter:
   uses-material-design: true
 
   assets:
+    - jsons/
     - assets/
     - assets/icons/
     - assets/images/
@@ -42,3 +47,6 @@ flutter:
     - family: Number
       fonts:
         - asset: fonts/number/number.ttf
+    - family: Quran
+      fonts:
+        - asset: fonts/quran/quran.ttf
