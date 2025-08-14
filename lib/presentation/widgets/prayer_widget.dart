@@ -19,8 +19,6 @@ class PrayerWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    bool isDark = Theme.of(context).brightness == Brightness.dark;
-    Color background = isDark ? AppColors.whiteColor.withAlpha(25) : AppColors.greenColor.withAlpha(25);
     return Stack(
       clipBehavior: Clip.hardEdge,
       children: [
@@ -37,15 +35,15 @@ class PrayerWidget extends StatelessWidget {
                   text: TextSpan(
                     children: [
                       TextSpan(
-                        text: prayer.isSunrise ? AppStrings.startsFrom + AppStrings.space + AppStrings.space : AppStrings.adhanTime + AppStrings.space + AppStrings.space,
+                        text: AppStrings.adhanTime + AppStrings.space + AppStrings.space,
                         style: TextStyle(fontSize: AppFonts.h4, fontFamily: AppFonts.arabic, color: color),
                       ),
                       TextSpan(
-                        text: DateFormat("hh:mm").format(prayer.time).toLowerCase(),
+                        text: DateFormat("hh:mm").format(prayer.adhan).toLowerCase(),
                         style: TextStyle(color: color, fontFamily: AppFonts.number),
                       ),
                       TextSpan(
-                        text: AppStrings.space + DateFormat("a").format(prayer.time).toLowerCase().languageTranslator,
+                        text: AppStrings.space + DateFormat("a").format(prayer.adhan).toLowerCase().languageTranslator,
                         style: TextStyle(fontSize: AppFonts.h4, fontFamily: AppFonts.arabic),
                       ),
                     ],
@@ -56,15 +54,15 @@ class PrayerWidget extends StatelessWidget {
                   text: TextSpan(
                     children: [
                       TextSpan(
-                        text: prayer.isSunrise ? AppStrings.endsWhen + AppStrings.space + AppStrings.space : AppStrings.iqamaTime + AppStrings.space + AppStrings.space,
+                        text: AppStrings.iqamaTime + AppStrings.space + AppStrings.space,
                         style: TextStyle(fontSize: AppFonts.h4, fontFamily: AppFonts.arabic, color: color),
                       ),
                       TextSpan(
-                        text: prayer.isSunrise ? DateFormat("hh:mm").format(prayer.end!).toLowerCase() : DateFormat("hh:mm").format(prayer.time.add(prayer.iqamahDelay.min)).toLowerCase(),
+                        text: DateFormat("hh:mm").format(prayer.adhan.add(prayer.iqamahDelay.min)).toLowerCase(),
                         style: TextStyle(color: color, fontFamily: AppFonts.number),
                       ),
                       TextSpan(
-                        text: prayer.isSunrise ? AppStrings.space + DateFormat("a").format(prayer.end!).toLowerCase().languageTranslator : AppStrings.space + DateFormat("a").format(prayer.time).toLowerCase().languageTranslator,
+                        text: AppStrings.space + DateFormat("a").format(prayer.adhan).toLowerCase().languageTranslator,
                         style: TextStyle(fontSize: AppFonts.h4, fontFamily: AppFonts.arabic),
                       ),
                     ],
