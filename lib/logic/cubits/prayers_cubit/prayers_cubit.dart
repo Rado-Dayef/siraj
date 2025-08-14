@@ -3,7 +3,7 @@ import 'dart:convert';
 
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:geolocator/geolocator.dart';
+import 'package:location/location.dart';
 import 'package:prayers_times/prayers_times.dart';
 import 'package:siraj/core/constants/extensions.dart';
 import 'package:siraj/core/constants/strings.dart';
@@ -20,15 +20,15 @@ class PrayersCubit extends Cubit<PrayersState> {
     getPrayers();
   }
 
-  Timer? _timer;
+  Timer? timer;
   bool isPrayersEndedForToday = false;
 
   Future<void> getPrayers() async {
     try {
       dynamic location = await LocationService.getCurrentLocation();
-      if (location is Position) {
+      if (location is LocationData) {
         DateTime now = DateTime.now();
-        PrayerTimes prayerTimes = PrayerTimes(dateTime: now, locationName: "Africa/Cairo", calculationParameters: PrayerCalculationMethod.egyptian(), coordinates: Coordinates(location.latitude, location.longitude));
+        PrayerTimes prayerTimes = PrayerTimes(dateTime: now, locationName: "Africa/Cairo", calculationParameters: PrayerCalculationMethod.egyptian(), coordinates: Coordinates(location.latitude!, location.longitude!));
         List<PrayerZekrModel> prayerAzkar = await loadPrayerAzkar();
         List<PrayerModel> prayers = [
           PrayerModel(
@@ -116,13 +116,13 @@ class PrayersCubit extends Cubit<PrayersState> {
         PrayerModel currentPrayer = prayers.firstWhere((prayer) => prayer.isCurrent, orElse: () => prayers.last);
         if (nextPrayer.isNotEmpty) {
           emitWithRemaining(now, prayers, nextPrayer.first, currentPrayer);
-          _timer = Timer.periodic(1.sec, (_) {
+          timer = Timer.periodic(1.sec, (_) {
             emitWithRemaining(DateTime.now(), prayers, nextPrayer.first, currentPrayer);
           });
         } else {
           isPrayersEndedForToday = true;
           emitWithRemaining(now, prayers, prayers.first, currentPrayer);
-          _timer = Timer.periodic(15.sec, (_) {
+          timer = Timer.periodic(15.sec, (_) {
             if (nextPrayer.isEmpty && DateTime.now().isAfter(DateTime(now.year, now.month, now.day, 24, 0, 0))) {
               isPrayersEndedForToday = false;
               restartPrayers();
@@ -159,15 +159,15 @@ class PrayersCubit extends Cubit<PrayersState> {
         "${seconds.toString().padLeft(2, "0")}";
   }
 
-  void restartPrayers() {
-    _timer?.cancel();
-    getPrayers();
-  }
-
   Future<List<PrayerZekrModel>> loadPrayerAzkar() async {
     final String response = await rootBundle.loadString(AppJsons.prayerAzkar);
     final Map<String, dynamic> jsonData = jsonDecode(response);
     final List<dynamic> data = jsonData["prayersAzkar"];
     return data.map((zekr) => PrayerZekrModel.fromJson(zekr)).toList();
+  }
+
+  void restartPrayers() {
+    timer?.cancel();
+    getPrayers();
   }
 }

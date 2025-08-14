@@ -11,6 +11,7 @@ import 'package:siraj/logic/cubits/prayers_cubit/prayers_cubit.dart';
 import 'package:siraj/presentation/widgets/container_widget.dart';
 import 'package:siraj/presentation/widgets/err_widget.dart';
 import 'package:siraj/presentation/widgets/prayer_widget.dart';
+import 'package:siraj/presentation/widgets/qibla_widget.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -71,16 +72,28 @@ class HomeScreen extends StatelessWidget {
                         } else if (state is PrayersSuccess) {
                           return Column(
                             children: [
-                              Text(
-                                context.read<PrayersCubit>().isPrayersEndedForToday ? AppStrings.todayIsPrayersAreOver : AppStrings.prayer + AppStrings.space + state.nextPrayer.name,
-                                style: TextStyle(fontSize: AppFonts.h1, fontFamily: AppFonts.arabic, color: color, fontWeight: AppFonts.bold),
+                              Row(
+                                children: [
+                                  Spacer(),
+                                  Column(
+                                    children: [
+                                      Text(
+                                        context.read<PrayersCubit>().isPrayersEndedForToday ? AppStrings.todayIsPrayersAreOver : AppStrings.prayer + AppStrings.space + state.nextPrayer.name,
+                                        style: TextStyle(fontSize: AppFonts.h1, fontFamily: AppFonts.arabic, color: color, fontWeight: AppFonts.bold),
+                                      ),
+                                      context.read<PrayersCubit>().isPrayersEndedForToday
+                                          ? 0.gap
+                                          : Text(
+                                              state.remainingForNextPrayer,
+                                              style: TextStyle(fontSize: AppFonts.h3, fontFamily: AppFonts.number, color: isDark ? AppColors.whiteColor : AppColors.greenColor),
+                                            ),
+                                    ],
+                                  ),
+                                  Expanded(
+                                    child: Align(alignment: Alignment.centerLeft, child: QiblaWidget()),
+                                  ),
+                                ],
                               ),
-                              context.read<PrayersCubit>().isPrayersEndedForToday
-                                  ? 0.gap
-                                  : Text(
-                                      state.remainingForNextPrayer,
-                                      style: TextStyle(fontSize: AppFonts.h3, fontFamily: AppFonts.number, color: isDark ? AppColors.whiteColor : AppColors.greenColor),
-                                    ),
                               10.gap,
                               ListView.separated(
                                 shrinkWrap: true,

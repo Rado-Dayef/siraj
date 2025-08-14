@@ -1,27 +1,31 @@
-import 'package:geolocator/geolocator.dart';
+import 'package:location/location.dart';
 import 'package:siraj/core/constants/strings.dart';
 
 class LocationService {
   static Future<dynamic> getCurrentLocation() async {
-    bool serviceEnabled;
-    LocationPermission permission;
-
-    serviceEnabled = await Geolocator.isLocationServiceEnabled();
+    final Location location = Location();
+    bool serviceEnabled = await location.serviceEnabled();
     if (!serviceEnabled) {
-      return AppStrings.locationServicesAreDisabled;
+      serviceEnabled = await location.requestService();
+      if (!serviceEnabled) {
+        return AppStrings.locationServicesAreDisabled;
+      }
     }
-
-    permission = await Geolocator.checkPermission();
-    if (permission == LocationPermission.denied) {
-      permission = await Geolocator.requestPermission();
-      if (permission == LocationPermission.denied) {
+    PermissionStatus permission = await location.hasPermission();
+    if (permission == PermissionStatus.denied) {
+      permission = await location.requestPermission();
+      if (permission == PermissionStatus.denied) {
         return AppStrings.locationPermissionsAreDenied;
       }
     }
-
-    if (permission == LocationPermission.deniedForever) {
+    if (permission == PermissionStatus.deniedForever) {
       return AppStrings.locationPermissionsArePermanentlyDenied;
     }
-    return await Geolocator.getCurrentPosition();
+    try {
+      LocationData locationData = await location.getLocation();
+      return locationData;
+    } catch (e) {
+      return "Failed to get location: $e";
+    }
   }
 }

@@ -38,7 +38,7 @@ class PrayerWidget extends StatelessWidget {
                     children: [
                       TextSpan(
                         text: prayer.isSunrise ? AppStrings.startsFrom + AppStrings.space + AppStrings.space : AppStrings.adhanTime + AppStrings.space + AppStrings.space,
-                        style: TextStyle(fontSize: AppFonts.h4, fontFamily: AppFonts.arabic),
+                        style: TextStyle(fontSize: AppFonts.h4, fontFamily: AppFonts.arabic, color: color),
                       ),
                       TextSpan(
                         text: DateFormat("hh:mm").format(prayer.time).toLowerCase(),
@@ -57,7 +57,7 @@ class PrayerWidget extends StatelessWidget {
                     children: [
                       TextSpan(
                         text: prayer.isSunrise ? AppStrings.endsWhen + AppStrings.space + AppStrings.space : AppStrings.iqamaTime + AppStrings.space + AppStrings.space,
-                        style: TextStyle(fontSize: AppFonts.h4, fontFamily: AppFonts.arabic),
+                        style: TextStyle(fontSize: AppFonts.h4, fontFamily: AppFonts.arabic, color: color),
                       ),
                       TextSpan(
                         text: prayer.isSunrise ? DateFormat("hh:mm").format(prayer.end!).toLowerCase() : DateFormat("hh:mm").format(prayer.time.add(prayer.iqamahDelay.min)).toLowerCase(),
