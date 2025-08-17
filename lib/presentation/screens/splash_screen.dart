@@ -22,7 +22,7 @@ class SplashScreen extends StatelessWidget {
       child: BlocListener<SplashCubit, SplashState>(
         listener: (context, state) {
           if (state is SplashFinished) {
-            Navigator.of(context).pushNamedAndRemoveUntil(AppRouteNames.home, (route) => false);
+            Navigator.of(context).pushNamedAndRemoveUntil(AppRouteNames.drawer, (route) => false);
           }
         },
         child: Directionality(

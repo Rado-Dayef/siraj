@@ -1,17 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:siraj/core/constants/strings.dart';
+import 'package:siraj/core/theme/colors.dart';
 import 'package:siraj/core/theme/fonts.dart';
 import 'package:siraj/data/models/prayer_zekr_model.dart';
 
 class PrayerZekrWidget extends StatelessWidget {
   final String prayerName;
   final PrayerZekrModel zekr;
-  final Color color, colorWithOpacity;
 
-  const PrayerZekrWidget(this.zekr, {required this.color, required this.prayerName, required this.colorWithOpacity, super.key});
+  const PrayerZekrWidget(this.zekr, {required this.prayerName, super.key});
 
   @override
   Widget build(BuildContext context) {
+    bool isDark = Theme.of(context).brightness == Brightness.dark;
+    Color color = isDark ? AppColors.whiteColor : AppColors.greenColor;
+    Color colorWithOpacity = isDark ? AppColors.whiteColor.withAlpha(150) : AppColors.greenColor.withAlpha(150);
     int count = prayerName == AppStrings.fajr
         ? zekr.fajrCount
         : prayerName == AppStrings.dhuhr

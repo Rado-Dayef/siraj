@@ -1,7 +1,7 @@
 import 'package:location/location.dart';
 import 'package:siraj/core/constants/strings.dart';
 
-class LocationService {
+class LocationServices {
   static Future<dynamic> getCurrentLocation() async {
     final Location location = Location();
     bool serviceEnabled = await location.serviceEnabled();

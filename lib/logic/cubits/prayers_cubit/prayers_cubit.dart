@@ -5,7 +5,6 @@ import 'package:adhan/adhan.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:location/location.dart';
-// import 'package:prayers_times/prayers_times.dart';
 import 'package:siraj/core/constants/extensions.dart';
 import 'package:siraj/core/constants/strings.dart';
 import 'package:siraj/core/services/location_services.dart';
@@ -26,7 +25,7 @@ class PrayersCubit extends Cubit<PrayersState> {
 
   Future<void> getPrayers() async {
     try {
-      dynamic location = await LocationService.getCurrentLocation();
+      dynamic location = await LocationServices.getCurrentLocation();
       if (location is LocationData) {
         DateTime now = DateTime.now();
         List<PrayerZekrModel> prayerAzkar = await loadPrayerAzkar();

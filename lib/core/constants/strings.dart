@@ -9,6 +9,7 @@ class AppStrings {
   static const String may = "مايو";
   static const String back = "عوده";
   static const String asr = "العصر";
+  static const String done = "مكتمل";
   static const String prayer = "صلاة";
   static const String june = "يونيو";
   static const String july = "يوليو";
@@ -20,6 +21,7 @@ class AppStrings {
   static const String dhuhr = "الظهر";
   static const String azkar = "الاذكار";
   static const String august = "أغسطس";
+  static const String total = "اجمالي";
   static const String friday = "الجمعة";
   static const String monday = "الإثنين";
   static const String january = "يناير";
@@ -35,6 +37,7 @@ class AppStrings {
   static const String tuesday = "الثلاثاء";
   static const String remaining = "متبقي";
   static const String september = "سبتمبر";
+  static const String notDone = "غير مكتمل";
   static const String wednesday = "الأربعاء";
   static const String adhanTime = "وقت الأذان";
   static const String iqamaTime = "وقت الإقامة";
@@ -51,8 +54,8 @@ class AppStrings {
   static const String sunnahsAndRaakahs = "السنن والركعات";
   static const String findNearestMosque = "ابحث عن أقرب مسجد";
   static const String todayIsPrayersAreOver = "انتهت صلوات اليوم";
-  static const String pageNotFound = "لم يتم العثور على هذه الصفحة";
-  static const String locationPermissionsAreDenied = "تم رفض أذونات الموقع";
+  static const String pageNotFound = "لم يتم العثور على هذه الصفحة.";
+  static const String locationPermissionsAreDenied = "تم رفض أذونات الموقع.";
   static const String locationServicesAreDisabled = "تم تعطيل خدمات الموقع.";
   static const String locationPermissionsArePermanentlyDenied = "تم رفض أذونات الموقع بشكل دائم، ولا يمكننا طلب الأذونات.";
 }

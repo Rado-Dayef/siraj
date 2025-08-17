@@ -7,11 +7,11 @@ import 'package:siraj/core/theme/assets.dart';
 import 'package:siraj/core/theme/colors.dart';
 import 'package:siraj/core/theme/fonts.dart';
 import 'package:siraj/data/models/prayer_model.dart';
+import 'package:siraj/logic/cubits/drawer_cubit/drawer_cubit.dart';
 import 'package:siraj/logic/cubits/prayers_cubit/prayers_cubit.dart';
 import 'package:siraj/presentation/widgets/container_widget.dart';
 import 'package:siraj/presentation/widgets/err_widget.dart';
 import 'package:siraj/presentation/widgets/prayer_widget.dart';
-import 'package:siraj/presentation/widgets/qibla_widget.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -61,6 +61,16 @@ class HomeScreen extends StatelessWidget {
                           ],
                         ),
                       ),
+                      Spacer(),
+                      Directionality(
+                        textDirection: TextDirection.ltr,
+                        child: IconButton(
+                          icon: Icon(Icons.sort, color: color),
+                          onPressed: () {
+                            context.read<DrawerCubit>().toggleDrawer();
+                          },
+                        ),
+                      ),
                     ],
                   ),
                   25.gap,
@@ -89,9 +99,6 @@ class HomeScreen extends StatelessWidget {
                                             ),
                                     ],
                                   ),
-                                  Expanded(
-                                    child: Align(alignment: Alignment.centerLeft, child: QiblaWidget()),
-                                  ),
                                 ],
                               ),
                               10.gap,
@@ -101,7 +108,7 @@ class HomeScreen extends StatelessWidget {
                                 itemCount: state.prayers.length,
                                 itemBuilder: (_, int index) {
                                   PrayerModel prayer = state.prayers[index];
-                                  return PrayerWidget(prayer, index: index, color: color);
+                                  return PrayerWidget(prayer, index: index);
                                 },
                                 separatorBuilder: (_, __) {
                                   return 10.gap;
