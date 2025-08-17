@@ -11,6 +11,7 @@ class NotFoundScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     bool isDark = Theme.of(context).brightness == Brightness.dark;
+    Color color = isDark ? AppColors.whiteColor : AppColors.greenColor;
     return Directionality(
       textDirection: TextDirection.rtl,
       child: Scaffold(
@@ -30,7 +31,7 @@ class NotFoundScreen extends StatelessWidget {
                   children: [
                     TextSpan(
                       text: "4 ",
-                      style: TextStyle(fontSize: AppFonts.max, fontFamily: AppFonts.number, color: isDark ? AppColors.whiteColor : AppColors.greenColor),
+                      style: TextStyle(fontSize: AppFonts.max, fontFamily: AppFonts.number, color: color),
                     ),
                     TextSpan(
                       text: "0",
@@ -38,7 +39,7 @@ class NotFoundScreen extends StatelessWidget {
                     ),
                     TextSpan(
                       text: " 4",
-                      style: TextStyle(fontSize: AppFonts.max, fontFamily: AppFonts.number, color: isDark ? AppColors.whiteColor : AppColors.greenColor),
+                      style: TextStyle(fontSize: AppFonts.max, fontFamily: AppFonts.number, color: color),
                     ),
                   ],
                 ),
@@ -46,7 +47,7 @@ class NotFoundScreen extends StatelessWidget {
               20.gap,
               Text(
                 AppStrings.pageNotFound,
-                style: TextStyle(fontSize: AppFonts.h1, color: isDark ? AppColors.whiteColor : AppColors.greenColor),
+                style: TextStyle(fontSize: AppFonts.h1, color: color),
               ),
               10.gap,
               InkWell(
@@ -57,11 +58,11 @@ class NotFoundScreen extends StatelessWidget {
                   padding: EdgeInsets.symmetric(vertical: 10, horizontal: 50),
                   decoration: BoxDecoration(
                     borderRadius: 5.defaultBorderRadius,
-                    border: Border.all(color: isDark ? AppColors.whiteColor : AppColors.greenColor),
+                    border: Border.all(color: color),
                   ),
                   child: Text(
                     AppStrings.back,
-                    style: TextStyle(fontSize: AppFonts.h2, color: isDark ? AppColors.whiteColor : AppColors.greenColor),
+                    style: TextStyle(fontSize: AppFonts.h2, color: color),
                   ),
                 ),
               ),

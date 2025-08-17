@@ -12,64 +12,62 @@ import 'package:siraj/presentation/widgets/tile_widget.dart';
 
 class PrayerWidget extends StatelessWidget {
   final int index;
-  final Color color;
   final PrayerModel prayer;
 
-  const PrayerWidget(this.prayer, {required this.index, required this.color, super.key});
+  const PrayerWidget(this.prayer, {required this.index, super.key});
 
   @override
   Widget build(BuildContext context) {
+    bool isDark = Theme.of(context).brightness == Brightness.dark;
+    Color color = isDark ? AppColors.whiteColor : AppColors.greenColor;
     return Stack(
       clipBehavior: Clip.hardEdge,
       children: [
-        InkWell(
+        TileWidget(
+          prayer.name,
           onTap: () {
             Navigator.of(context).pushNamed(AppRouteNames.prayer, arguments: prayer);
           },
-          child: TileWidget(
-            prayer.name,
-            color: color,
-            trailing: Column(
-              children: [
-                RichText(
-                  text: TextSpan(
-                    children: [
-                      TextSpan(
-                        text: AppStrings.adhanTime + AppStrings.space + AppStrings.space,
-                        style: TextStyle(fontSize: AppFonts.h4, fontFamily: AppFonts.arabic, color: color),
-                      ),
-                      TextSpan(
-                        text: DateFormat("hh:mm").format(prayer.adhan).toLowerCase(),
-                        style: TextStyle(color: color, fontFamily: AppFonts.number),
-                      ),
-                      TextSpan(
-                        text: AppStrings.space + DateFormat("a").format(prayer.adhan).toLowerCase().languageTranslator,
-                        style: TextStyle(fontSize: AppFonts.h4, fontFamily: AppFonts.arabic),
-                      ),
-                    ],
-                  ),
+          trailing: Column(
+            children: [
+              RichText(
+                text: TextSpan(
+                  children: [
+                    TextSpan(
+                      text: AppStrings.adhanTime + AppStrings.space + AppStrings.space,
+                      style: TextStyle(fontSize: AppFonts.h4, fontFamily: AppFonts.arabic, color: color),
+                    ),
+                    TextSpan(
+                      text: DateFormat("hh:mm").format(prayer.adhan).toLowerCase(),
+                      style: TextStyle(color: color, fontFamily: AppFonts.number),
+                    ),
+                    TextSpan(
+                      text: AppStrings.space + DateFormat("a").format(prayer.adhan).toLowerCase().languageTranslator,
+                      style: TextStyle(fontSize: AppFonts.h4, fontFamily: AppFonts.arabic),
+                    ),
+                  ],
                 ),
-                10.gap,
-                RichText(
-                  text: TextSpan(
-                    children: [
-                      TextSpan(
-                        text: AppStrings.iqamaTime + AppStrings.space + AppStrings.space,
-                        style: TextStyle(fontSize: AppFonts.h4, fontFamily: AppFonts.arabic, color: color),
-                      ),
-                      TextSpan(
-                        text: DateFormat("hh:mm").format(prayer.adhan.add(prayer.iqamahDelay.min)).toLowerCase(),
-                        style: TextStyle(color: color, fontFamily: AppFonts.number),
-                      ),
-                      TextSpan(
-                        text: AppStrings.space + DateFormat("a").format(prayer.adhan).toLowerCase().languageTranslator,
-                        style: TextStyle(fontSize: AppFonts.h4, fontFamily: AppFonts.arabic),
-                      ),
-                    ],
-                  ),
+              ),
+              10.gap,
+              RichText(
+                text: TextSpan(
+                  children: [
+                    TextSpan(
+                      text: AppStrings.iqamaTime + AppStrings.space + AppStrings.space,
+                      style: TextStyle(fontSize: AppFonts.h4, fontFamily: AppFonts.arabic, color: color),
+                    ),
+                    TextSpan(
+                      text: DateFormat("hh:mm").format(prayer.adhan.add(prayer.iqamahDelay.min)).toLowerCase(),
+                      style: TextStyle(color: color, fontFamily: AppFonts.number),
+                    ),
+                    TextSpan(
+                      text: AppStrings.space + DateFormat("a").format(prayer.adhan).toLowerCase().languageTranslator,
+                      style: TextStyle(fontSize: AppFonts.h4, fontFamily: AppFonts.arabic),
+                    ),
+                  ],
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
         prayer.isCurrent || prayer.isNext

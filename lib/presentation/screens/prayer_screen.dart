@@ -20,9 +20,9 @@ class PrayerScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    PrayerModel prayer = ModalRoute.of(context)!.settings.arguments as PrayerModel;
     bool isDark = Theme.of(context).brightness == Brightness.dark;
     Color color = isDark ? AppColors.whiteColor : AppColors.greenColor;
+    PrayerModel prayer = ModalRoute.of(context)!.settings.arguments as PrayerModel;
     Color colorWithOpacity = isDark ? AppColors.whiteColor.withAlpha(150) : AppColors.greenColor.withAlpha(150);
 
     return Directionality(
@@ -111,7 +111,6 @@ class PrayerScreen extends StatelessWidget {
                             Expanded(
                               child: TileWidget(
                                 AppStrings.adhanTime,
-                                color: color,
                                 trailing: RichText(
                                   text: TextSpan(
                                     children: [
@@ -132,7 +131,6 @@ class PrayerScreen extends StatelessWidget {
                             Expanded(
                               child: TileWidget(
                                 AppStrings.iqamaTime,
-                                color: color,
                                 trailing: RichText(
                                   text: TextSpan(
                                     children: [
@@ -165,7 +163,6 @@ class PrayerScreen extends StatelessWidget {
                         10.gap,
                         TileWidget(
                           AppStrings.raakahsCount,
-                          color: color,
                           trailing: Text(
                             prayer.raakahsCount.toString(),
                             style: TextStyle(fontFamily: AppFonts.number, color: color),
@@ -177,7 +174,6 @@ class PrayerScreen extends StatelessWidget {
                             Expanded(
                               child: TileWidget(
                                 AppStrings.sunnahsBefore,
-                                color: color,
                                 trailing: prayer.sunnah.before.isNotEmpty
                                     ? Text(
                                         prayer.sunnah.before.toString(),
@@ -193,7 +189,6 @@ class PrayerScreen extends StatelessWidget {
                             Expanded(
                               child: TileWidget(
                                 AppStrings.sunnahsAfter,
-                                color: color,
                                 trailing: prayer.sunnah.after.isNotEmpty
                                     ? Text(
                                         prayer.sunnah.after.toString(),
@@ -226,7 +221,7 @@ class PrayerScreen extends StatelessWidget {
                           physics: NeverScrollableScrollPhysics(),
                           itemBuilder: (_, int index) {
                             PrayerZekrModel zekr = prayer.azkar[index];
-                            return PrayerZekrWidget(zekr, color: color, prayerName: prayer.name, colorWithOpacity: colorWithOpacity);
+                            return PrayerZekrWidget(zekr, prayerName: prayer.name);
                           },
                           separatorBuilder: (_, __) {
                             return Divider(height: 50, color: colorWithOpacity, indent: (MediaQuery.of(context).size.width - 60) / 4, endIndent: (MediaQuery.of(context).size.width - 60) / 4);
