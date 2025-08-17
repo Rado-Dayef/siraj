@@ -82,25 +82,16 @@ class HomeScreen extends StatelessWidget {
                         } else if (state is PrayersSuccess) {
                           return Column(
                             children: [
-                              Row(
-                                children: [
-                                  Spacer(),
-                                  Column(
-                                    children: [
-                                      Text(
-                                        context.read<PrayersCubit>().isPrayersEndedForToday ? AppStrings.todayIsPrayersAreOver : AppStrings.prayer + AppStrings.space + state.nextPrayer.name,
-                                        style: TextStyle(fontSize: AppFonts.h1, fontFamily: AppFonts.arabic, color: color, fontWeight: AppFonts.bold),
-                                      ),
-                                      context.read<PrayersCubit>().isPrayersEndedForToday
-                                          ? 0.gap
-                                          : Text(
-                                              state.remainingForNextPrayer,
-                                              style: TextStyle(fontSize: AppFonts.h3, fontFamily: AppFonts.number, color: isDark ? AppColors.whiteColor : AppColors.greenColor),
-                                            ),
-                                    ],
-                                  ),
-                                ],
+                              Text(
+                                context.read<PrayersCubit>().isPrayersEndedForToday ? AppStrings.todayIsPrayersAreOver : AppStrings.prayer + AppStrings.space + state.nextPrayer.name,
+                                style: TextStyle(fontSize: AppFonts.h1, fontFamily: AppFonts.arabic, color: color, fontWeight: AppFonts.bold),
                               ),
+                              context.read<PrayersCubit>().isPrayersEndedForToday
+                                  ? 0.gap
+                                  : Text(
+                                      state.remainingForNextPrayer,
+                                      style: TextStyle(fontSize: AppFonts.h3, fontFamily: AppFonts.number, color: isDark ? AppColors.whiteColor : AppColors.greenColor),
+                                    ),
                               10.gap,
                               ListView.separated(
                                 shrinkWrap: true,

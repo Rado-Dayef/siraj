@@ -24,8 +24,8 @@ class LocationServices {
     try {
       LocationData locationData = await location.getLocation();
       return locationData;
-    } catch (e) {
-      return "Failed to get location: $e";
+    } catch (error) {
+      return error.toString();
     }
   }
 }
