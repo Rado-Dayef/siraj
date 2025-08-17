@@ -36,7 +36,18 @@ class DrawerMenuScreen extends StatelessWidget {
                   },
                   containerColor: background,
                   textColor: color,
-                  leading: AppAssets.logoDark,
+                  leading: isDark ? AppAssets.azkarLight : AppAssets.azkarDark,
+                ),
+                10.gap,
+                TileWidget(
+                  AppStrings.qibla,
+                  onTap: () {
+                    context.read<DrawerCubit>().closeDrawer();
+                    Navigator.of(context).pushNamed(AppRouteNames.qibla);
+                  },
+                  containerColor: background,
+                  textColor: color,
+                  leading: isDark ? AppAssets.qiblaLight : AppAssets.qiblaDark,
                 ),
               ],
             ),

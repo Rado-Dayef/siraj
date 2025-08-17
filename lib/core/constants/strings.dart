@@ -5,6 +5,7 @@ class AppStrings {
   /// Texts
   static const String am = "ص";
   static const String pm = "م";
+  static const String km = "كم";
   static const String space = " ";
   static const String may = "مايو";
   static const String back = "عوده";
@@ -20,6 +21,7 @@ class AppStrings {
   static const String isha = "العشاء";
   static const String dhuhr = "الظهر";
   static const String azkar = "الاذكار";
+  static const String qibla = "القبلة";
   static const String august = "أغسطس";
   static const String total = "اجمالي";
   static const String friday = "الجمعة";

@@ -3,6 +3,7 @@ import 'dart:math';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_compass/flutter_compass.dart';
+import 'package:location/location.dart';
 import 'package:siraj/core/constants/extensions.dart';
 import 'package:siraj/core/services/location_services.dart';
 
@@ -13,23 +14,29 @@ class QiblaCubit extends Cubit<QiblaState> {
     getQibla();
   }
 
+  double kaabaLat = 21.4225;
+  double kaabaLon = 39.8262;
+
   StreamSubscription<CompassEvent>? compassSubscription;
   double? qiblaDirection;
   double currentAngle = 0;
 
   Future<void> getQibla() async {
     try {
-      QiblaLoading loadingState = QiblaLoading();
-      emit(loadingState);
+      dynamic location = await LocationServices.getCurrentLocation();
 
-      final location = await LocationServices.getCurrentLocation();
-      const kaabaLat = 21.4225;
-      const kaabaLon = 39.8262;
-
-      qiblaDirection = calculateBearing(location.latitude!, location.longitude!, kaabaLat, kaabaLon);
-      startQibla();
-      QiblaSuccess successState = QiblaSuccess(currentAngle);
-      emit(successState);
+      if (location is LocationData) {
+        qiblaDirection = calculateBearing(location.latitude!, location.longitude!, kaabaLat, kaabaLon);
+        startQibla(location);
+        if (!isClosed) {
+          QiblaSuccess successState = QiblaSuccess(currentAngle);
+          emit(successState);
+        }
+      } else {
+        location.toString().showToast;
+        QiblaFailure failureState = QiblaFailure(message: location.toString());
+        emit(failureState);
+      }
     } catch (error) {
       error.toString().showToast;
       QiblaFailure failureState = QiblaFailure(message: error.toString());
@@ -37,7 +44,7 @@ class QiblaCubit extends Cubit<QiblaState> {
     }
   }
 
-  void startQibla() {
+  void startQibla(location) {
     compassSubscription?.cancel();
 
     compassSubscription = FlutterCompass.events?.listen(
@@ -46,8 +53,10 @@ class QiblaCubit extends Cubit<QiblaState> {
           final target = (qiblaDirection! - event.heading!) * (pi / 180);
           final normalized = normalizeAngle(target, currentAngle);
           currentAngle = currentAngle + (normalized - currentAngle) * 0.2;
-          QiblaSuccess successState = QiblaSuccess(currentAngle);
-          emit(successState);
+          if (!isClosed) {
+            QiblaSuccess successState = QiblaSuccess(currentAngle);
+            emit(successState);
+          }
         }
       },
       onError: (error) {
@@ -74,5 +83,11 @@ class QiblaCubit extends Cubit<QiblaState> {
     if (diff > pi) diff -= 2 * pi;
     if (diff < -pi) diff += 2 * pi;
     return previous + diff;
+  }
+
+  @override
+  Future<void> close() {
+    compassSubscription?.cancel();
+    return super.close();
   }
 }

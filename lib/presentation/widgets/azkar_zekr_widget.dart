@@ -66,7 +66,7 @@ class AzkarZekrWidget extends StatelessWidget {
                     onPressed: () {
                       context.read<AzkarCubit>().updateZekr(zekr: zekr, table: table, action: "inc");
                     },
-                    icon: Icon(Icons.add),
+                    icon: Icon(Icons.add, color: color),
                   ),
                   Spacer(),
                   CircularPercentIndicator(
@@ -89,7 +89,7 @@ class AzkarZekrWidget extends StatelessWidget {
                     onPressed: () {
                       context.read<AzkarCubit>().updateZekr(zekr: zekr, table: table, action: "reset");
                     },
-                    icon: Icon(Icons.restart_alt_rounded),
+                    icon: Icon(Icons.restart_alt_rounded, color: color),
                   ),
                   Spacer(),
                 ],
