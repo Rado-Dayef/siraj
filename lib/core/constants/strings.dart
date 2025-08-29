@@ -27,6 +27,7 @@ class AppStrings {
   static const String friday = "الجمعة";
   static const String monday = "الإثنين";
   static const String january = "يناير";
+  static const String tafsir = "التفسير";
   static const String nothing = "لا يوجد";
   static const String october = "أكتوبر";
   static const String saturday = "السبت";
@@ -41,7 +42,9 @@ class AppStrings {
   static const String september = "سبتمبر";
   static const String notDone = "غير مكتمل";
   static const String wednesday = "الأربعاء";
+  static const String readings = "القراءات";
   static const String adhanTime = "وقت الأذان";
+  static const String quran = "القرآن الكريم";
   static const String iqamaTime = "وقت الإقامة";
   static const String welcomeTo = "مرحبا بك في";
   static const String raakahsCount = "عدد الركعات";

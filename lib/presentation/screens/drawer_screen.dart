@@ -19,6 +19,7 @@ class DrawerScreen extends StatelessWidget {
       child: BlocBuilder<DrawerCubit, ZoomDrawerController>(
         builder: (context, state) {
           return ZoomDrawer(
+            angle: 0,
             isRtl: true,
             borderRadius: 20,
             showShadow: true,
@@ -28,7 +29,7 @@ class DrawerScreen extends StatelessWidget {
             menuScreen: DrawerMenuScreen(),
             openCurve: Curves.fastOutSlowIn,
             drawerShadowsBackgroundColor: shadowsColor,
-            slideWidth: MediaQuery.of(context).size.width * 0.75,
+            slideWidth: MediaQuery.of(context).size.width * 0.65,
             mainScreen: HomeScreen(),
           );
         },

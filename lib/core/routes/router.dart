@@ -6,6 +6,7 @@ import 'package:siraj/presentation/screens/drawer_screen.dart';
 import 'package:siraj/presentation/screens/not_found_screen.dart';
 import 'package:siraj/presentation/screens/prayer_screen.dart';
 import 'package:siraj/presentation/screens/qibla_screen.dart';
+import 'package:siraj/presentation/screens/quran_screen.dart';
 import 'package:siraj/presentation/screens/splash_screen.dart';
 
 import 'route_names.dart';
@@ -13,6 +14,16 @@ import 'route_names.dart';
 class AppRouter {
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
+      case AppRouteNames.quran:
+        return PageRouteBuilder(
+          settings: settings,
+          pageBuilder: (_, __, ___) => QuranScreen(),
+          transitionsBuilder: (_, animation, ___, child) {
+            final curved = CurvedAnimation(parent: animation, curve: Curves.bounceInOut);
+            return FadeTransition(opacity: curved, child: child);
+          },
+          transitionDuration: 500.milSec,
+        );
       case AppRouteNames.qibla:
         return PageRouteBuilder(
           settings: settings,

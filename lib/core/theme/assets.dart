@@ -9,7 +9,9 @@ class AppAssets {
   /// Icons
   static const String qiblaDark = "assets/icons/qibla_dark.png";
   static const String azkarDark = "assets/icons/azkar_dark.png";
+  static const String quranDark = "assets/icons/quran_dark.png";
   static const String qiblaLight = "assets/icons/qibla_light.png";
+  static const String quranLight = "assets/icons/quran_light.png";
   static const String azkarLight = "assets/icons/azkar_light.png";
   static const String mosqueDark = "assets/icons/mosque_dark.png";
   static const String mosqueLight = "assets/icons/mosque_light.png";
