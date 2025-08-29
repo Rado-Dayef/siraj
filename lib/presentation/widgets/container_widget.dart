@@ -14,10 +14,8 @@ class ContainerWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    bool isDark = Theme
-        .of(context)
-        .brightness == Brightness.dark;
-    Color background = isDark ? AppColors.whiteColor.withAlpha(25) : AppColors.greenColor.withAlpha(25);
+    bool isDark = Theme.of(context).brightness == Brightness.dark;
+    Color background = isDark ? AppColors.whiteColor.withAlpha(50) : AppColors.greenColor.withAlpha(25);
     return InkWell(
       onTap: onTap,
       child: ClipRRect(
@@ -26,6 +24,7 @@ class ContainerWidget extends StatelessWidget {
           filter: ImageFilter.blur(sigmaX: 5, sigmaY: 5),
           child: Container(
             width: double.infinity,
+            alignment: Alignment.center,
             padding: padding.edgeInsetsAll,
             decoration: BoxDecoration(color: color ?? background, borderRadius: 5.defaultBorderRadius),
             child: child,

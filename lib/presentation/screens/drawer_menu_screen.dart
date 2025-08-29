@@ -29,6 +29,17 @@ class DrawerMenuScreen extends StatelessWidget {
                 Center(child: Image.asset(!isDark ? AppAssets.logoDark : AppAssets.logoLight, width: 100, height: 100)),
                 Divider(color: color, indent: 25, endIndent: 25, height: 50),
                 TileWidget(
+                  AppStrings.quran,
+                  onTap: () {
+                    context.read<DrawerCubit>().closeDrawer();
+                    Navigator.of(context).pushNamed(AppRouteNames.quran);
+                  },
+                  containerColor: background,
+                  textColor: color,
+                  leading: isDark ? AppAssets.quranLight : AppAssets.quranDark,
+                ),
+                10.gap,
+                TileWidget(
                   AppStrings.azkar,
                   onTap: () {
                     context.read<DrawerCubit>().closeDrawer();
