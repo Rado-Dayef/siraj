@@ -1,0 +1,914 @@
+[
+  {
+    "number": 1,
+    "pagesTo": 1,
+    "pagesFrom": 1,
+    "versesCount": 7,
+    "name": "الفاتحة",
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 2,
+    "pagesTo": 49,
+    "pagesFrom": 2,
+    "name": "البقرة",
+    "versesCount": 286,
+    "revelationPlace": "مدنية"
+  },
+  {
+    "number": 3,
+    "pagesTo": 76,
+    "pagesFrom": 50,
+    "name": "آل عمران",
+    "versesCount": 200,
+    "revelationPlace": "مدنية"
+  },
+  {
+    "number": 4,
+    "pagesTo": 106,
+    "pagesFrom": 77,
+    "name": "النساء",
+    "versesCount": 176,
+    "revelationPlace": "مدنية"
+  },
+  {
+    "number": 5,
+    "pagesTo": 127,
+    "pagesFrom": 106,
+    "name": "المائدة",
+    "versesCount": 120,
+    "revelationPlace": "مدنية"
+  },
+  {
+    "number": 6,
+    "pagesTo": 150,
+    "pagesFrom": 128,
+    "name": "الأنعام",
+    "versesCount": 165,
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 7,
+    "pagesTo": 176,
+    "pagesFrom": 151,
+    "name": "الأعراف",
+    "versesCount": 206,
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 8,
+    "pagesTo": 186,
+    "pagesFrom": 177,
+    "name": "الأنفال",
+    "versesCount": 75,
+    "revelationPlace": "مدنية"
+  },
+  {
+    "number": 9,
+    "pagesTo": 207,
+    "pagesFrom": 187,
+    "name": "التوبة",
+    "versesCount": 129,
+    "revelationPlace": "مدنية"
+  },
+  {
+    "number": 10,
+    "name": "يونس",
+    "pagesTo": 221,
+    "pagesFrom": 208,
+    "versesCount": 109,
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 11,
+    "name": "هود",
+    "pagesTo": 235,
+    "pagesFrom": 221,
+    "versesCount": 123,
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 12,
+    "name": "يوسف",
+    "pagesTo": 248,
+    "pagesFrom": 235,
+    "versesCount": 111,
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 13,
+    "pagesTo": 255,
+    "name": "الرعد",
+    "pagesFrom": 249,
+    "versesCount": 43,
+    "revelationPlace": "مدنية"
+  },
+  {
+    "number": 14,
+    "pagesTo": 261,
+    "pagesFrom": 255,
+    "name": "إبراهيم",
+    "versesCount": 52,
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 15,
+    "pagesTo": 267,
+    "name": "الحجر",
+    "pagesFrom": 262,
+    "versesCount": 99,
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 16,
+    "pagesTo": 281,
+    "name": "النحل",
+    "pagesFrom": 267,
+    "versesCount": 128,
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 17,
+    "pagesTo": 293,
+    "pagesFrom": 282,
+    "name": "الإسراء",
+    "versesCount": 111,
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 18,
+    "pagesTo": 304,
+    "name": "الكهف",
+    "pagesFrom": 293,
+    "versesCount": 110,
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 19,
+    "name": "مريم",
+    "pagesTo": 312,
+    "pagesFrom": 305,
+    "versesCount": 98,
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 20,
+    "name": "طه",
+    "pagesTo": 321,
+    "pagesFrom": 312,
+    "versesCount": 135,
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 21,
+    "pagesTo": 331,
+    "pagesFrom": 322,
+    "name": "الأنبياء",
+    "versesCount": 112,
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 22,
+    "name": "الحج",
+    "pagesTo": 341,
+    "pagesFrom": 332,
+    "versesCount": 78,
+    "revelationPlace": "مدنية"
+  },
+  {
+    "number": 23,
+    "pagesTo": 349,
+    "pagesFrom": 342,
+    "name": "المؤمنون",
+    "versesCount": 118,
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 24,
+    "pagesTo": 359,
+    "pagesFrom": 350,
+    "name": "النور",
+    "versesCount": 64,
+    "revelationPlace": "مدنية"
+  },
+  {
+    "number": 25,
+    "pagesTo": 366,
+    "pagesFrom": 359,
+    "name": "الفرقان",
+    "versesCount": 77,
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 26,
+    "pagesTo": 376,
+    "pagesFrom": 367,
+    "name": "الشعراء",
+    "versesCount": 227,
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 27,
+    "pagesTo": 385,
+    "name": "النمل",
+    "pagesFrom": 377,
+    "versesCount": 93,
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 28,
+    "pagesTo": 396,
+    "name": "القصص",
+    "pagesFrom": 385,
+    "versesCount": 88,
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 29,
+    "pagesTo": 404,
+    "pagesFrom": 396,
+    "versesCount": 69,
+    "name": "العنكبوت",
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 30,
+    "pagesTo": 410,
+    "name": "الروم",
+    "pagesFrom": 404,
+    "versesCount": 60,
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 31,
+    "pagesTo": 414,
+    "name": "لقمان",
+    "pagesFrom": 411,
+    "versesCount": 34,
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 32,
+    "pagesTo": 417,
+    "pagesFrom": 415,
+    "name": "السجدة",
+    "versesCount": 30,
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 33,
+    "pagesTo": 427,
+    "pagesFrom": 418,
+    "name": "الأحزاب",
+    "versesCount": 73,
+    "revelationPlace": "مدنية"
+  },
+  {
+    "number": 34,
+    "name": "سبأ",
+    "pagesTo": 434,
+    "pagesFrom": 428,
+    "versesCount": 54,
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 35,
+    "name": "فاطر",
+    "pagesTo": 440,
+    "pagesFrom": 434,
+    "versesCount": 45,
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 36,
+    "name": "يس",
+    "pagesTo": 445,
+    "pagesFrom": 440,
+    "versesCount": 83,
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 37,
+    "pagesTo": 452,
+    "pagesFrom": 446,
+    "name": "الصافات",
+    "versesCount": 182,
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 38,
+    "name": "ص",
+    "pagesTo": 458,
+    "pagesFrom": 453,
+    "versesCount": 88,
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 39,
+    "pagesTo": 467,
+    "name": "الزمر",
+    "pagesFrom": 458,
+    "versesCount": 75,
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 40,
+    "name": "غافر",
+    "pagesTo": 476,
+    "pagesFrom": 467,
+    "versesCount": 85,
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 41,
+    "name": "فصلت",
+    "pagesTo": 482,
+    "pagesFrom": 477,
+    "versesCount": 54,
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 42,
+    "pagesTo": 489,
+    "pagesFrom": 483,
+    "name": "الشورى",
+    "versesCount": 53,
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 43,
+    "pagesTo": 495,
+    "pagesFrom": 489,
+    "name": "الزخرف",
+    "versesCount": 89,
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 44,
+    "pagesTo": 498,
+    "pagesFrom": 496,
+    "name": "الدخان",
+    "versesCount": 59,
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 45,
+    "pagesTo": 502,
+    "pagesFrom": 499,
+    "name": "الجاثية",
+    "versesCount": 37,
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 46,
+    "pagesTo": 506,
+    "pagesFrom": 502,
+    "name": "الأحقاف",
+    "versesCount": 35,
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 47,
+    "name": "محمد",
+    "pagesTo": 510,
+    "pagesFrom": 507,
+    "versesCount": 38,
+    "revelationPlace": "مدنية"
+  },
+  {
+    "number": 48,
+    "pagesTo": 515,
+    "name": "الفتح",
+    "pagesFrom": 511,
+    "versesCount": 29,
+    "revelationPlace": "مدنية"
+  },
+  {
+    "number": 49,
+    "pagesTo": 517,
+    "pagesFrom": 515,
+    "name": "الحجرات",
+    "versesCount": 18,
+    "revelationPlace": "مدنية"
+  },
+  {
+    "number": 50,
+    "name": "ق",
+    "pagesTo": 520,
+    "pagesFrom": 518,
+    "versesCount": 45,
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 51,
+    "pagesTo": 523,
+    "pagesFrom": 520,
+    "versesCount": 60,
+    "name": "الذاريات",
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 52,
+    "pagesTo": 525,
+    "name": "الطور",
+    "pagesFrom": 523,
+    "versesCount": 49,
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 53,
+    "pagesTo": 528,
+    "name": "النجم",
+    "pagesFrom": 526,
+    "versesCount": 62,
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 54,
+    "pagesTo": 531,
+    "name": "القمر",
+    "pagesFrom": 528,
+    "versesCount": 55,
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 55,
+    "pagesTo": 534,
+    "pagesFrom": 531,
+    "name": "الرحمن",
+    "versesCount": 78,
+    "revelationPlace": "مدنية"
+  },
+  {
+    "number": 56,
+    "pagesTo": 537,
+    "pagesFrom": 534,
+    "name": "الواقعة",
+    "versesCount": 96,
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 57,
+    "pagesTo": 541,
+    "pagesFrom": 537,
+    "name": "الحديد",
+    "versesCount": 29,
+    "revelationPlace": "مدنية"
+  },
+  {
+    "number": 58,
+    "pagesTo": 545,
+    "pagesFrom": 542,
+    "versesCount": 22,
+    "name": "المجادلة",
+    "revelationPlace": "مدنية"
+  },
+  {
+    "number": 59,
+    "pagesTo": 548,
+    "name": "الحشر",
+    "pagesFrom": 545,
+    "versesCount": 24,
+    "revelationPlace": "مدنية"
+  },
+  {
+    "number": 60,
+    "pagesTo": 551,
+    "pagesFrom": 549,
+    "versesCount": 13,
+    "name": "الممتحنة",
+    "revelationPlace": "مدنية"
+  },
+  {
+    "number": 61,
+    "name": "الصف",
+    "pagesTo": 552,
+    "pagesFrom": 551,
+    "versesCount": 14,
+    "revelationPlace": "مدنية"
+  },
+  {
+    "number": 62,
+    "pagesTo": 554,
+    "pagesFrom": 553,
+    "name": "الجمعة",
+    "versesCount": 11,
+    "revelationPlace": "مدنية"
+  },
+  {
+    "number": 63,
+    "pagesTo": 555,
+    "pagesFrom": 554,
+    "versesCount": 11,
+    "name": "المنافقون",
+    "revelationPlace": "مدنية"
+  },
+  {
+    "number": 64,
+    "pagesTo": 557,
+    "pagesFrom": 556,
+    "name": "التغابن",
+    "versesCount": 18,
+    "revelationPlace": "مدنية"
+  },
+  {
+    "number": 65,
+    "pagesTo": 559,
+    "name": "الطلاق",
+    "pagesFrom": 558,
+    "versesCount": 12,
+    "revelationPlace": "مدنية"
+  },
+  {
+    "number": 66,
+    "pagesTo": 561,
+    "pagesFrom": 560,
+    "name": "التحريم",
+    "versesCount": 12,
+    "revelationPlace": "مدنية"
+  },
+  {
+    "number": 67,
+    "pagesTo": 564,
+    "name": "الملك",
+    "pagesFrom": 562,
+    "versesCount": 30,
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 68,
+    "pagesTo": 566,
+    "name": "القلم",
+    "pagesFrom": 564,
+    "versesCount": 52,
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 69,
+    "pagesTo": 568,
+    "pagesFrom": 566,
+    "name": "الحاقة",
+    "versesCount": 52,
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 70,
+    "pagesTo": 570,
+    "pagesFrom": 568,
+    "name": "المعارج",
+    "versesCount": 44,
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 71,
+    "name": "نوح",
+    "pagesTo": 571,
+    "pagesFrom": 570,
+    "versesCount": 28,
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 72,
+    "name": "الجن",
+    "pagesTo": 573,
+    "pagesFrom": 572,
+    "versesCount": 28,
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 73,
+    "pagesTo": 575,
+    "pagesFrom": 574,
+    "name": "المزمل",
+    "versesCount": 20,
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 74,
+    "pagesTo": 577,
+    "pagesFrom": 575,
+    "name": "المدثر",
+    "versesCount": 56,
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 75,
+    "pagesTo": 578,
+    "pagesFrom": 577,
+    "name": "القيامة",
+    "versesCount": 40,
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 76,
+    "pagesTo": 580,
+    "pagesFrom": 578,
+    "name": "الإنسان",
+    "versesCount": 31,
+    "revelationPlace": "مدنية"
+  },
+  {
+    "number": 77,
+    "pagesTo": 581,
+    "pagesFrom": 580,
+    "name": "المرسلات",
+    "versesCount": 50,
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 78,
+    "pagesTo": 583,
+    "pagesFrom": 582,
+    "name": "النبأ",
+    "versesCount": 40,
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 79,
+    "pagesTo": 584,
+    "pagesFrom": 583,
+    "versesCount": 46,
+    "name": "النازعات",
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 80,
+    "name": "عبس",
+    "pagesTo": 585,
+    "pagesFrom": 585,
+    "versesCount": 42,
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 81,
+    "pagesTo": 586,
+    "pagesFrom": 586,
+    "name": "التكوير",
+    "versesCount": 29,
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 82,
+    "pagesTo": 587,
+    "pagesFrom": 587,
+    "name": "الانفطار",
+    "versesCount": 19,
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 83,
+    "pagesTo": 589,
+    "pagesFrom": 587,
+    "name": "المطففين",
+    "versesCount": 36,
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 84,
+    "pagesTo": 589,
+    "pagesFrom": 589,
+    "name": "الانشقاق",
+    "versesCount": 25,
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 85,
+    "pagesTo": 590,
+    "pagesFrom": 590,
+    "name": "البروج",
+    "versesCount": 22,
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 86,
+    "pagesTo": 591,
+    "pagesFrom": 591,
+    "name": "الطارق",
+    "versesCount": 17,
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 87,
+    "pagesTo": 592,
+    "name": "الأعلى",
+    "pagesFrom": 591,
+    "versesCount": 19,
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 88,
+    "pagesTo": 592,
+    "pagesFrom": 592,
+    "name": "الغاشية",
+    "versesCount": 26,
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 89,
+    "pagesTo": 594,
+    "name": "الفجر",
+    "pagesFrom": 593,
+    "versesCount": 30,
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 90,
+    "pagesTo": 594,
+    "name": "البلد",
+    "pagesFrom": 594,
+    "versesCount": 20,
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 91,
+    "pagesTo": 595,
+    "name": "الشمس",
+    "pagesFrom": 595,
+    "versesCount": 15,
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 92,
+    "pagesTo": 596,
+    "name": "الليل",
+    "pagesFrom": 595,
+    "versesCount": 21,
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 93,
+    "pagesTo": 596,
+    "name": "الضحى",
+    "pagesFrom": 596,
+    "versesCount": 11,
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 94,
+    "pagesTo": 596,
+    "name": "الشرح",
+    "pagesFrom": 596,
+    "versesCount": 8,
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 95,
+    "pagesTo": 597,
+    "name": "التين",
+    "pagesFrom": 597,
+    "versesCount": 8,
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 96,
+    "pagesTo": 597,
+    "name": "العلق",
+    "pagesFrom": 597,
+    "versesCount": 19,
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 97,
+    "pagesTo": 598,
+    "name": "القدر",
+    "pagesFrom": 598,
+    "versesCount": 5,
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 98,
+    "pagesTo": 599,
+    "pagesFrom": 598,
+    "name": "البينة",
+    "versesCount": 8,
+    "revelationPlace": "مدنية"
+  },
+  {
+    "number": 99,
+    "pagesTo": 599,
+    "pagesFrom": 599,
+    "versesCount": 8,
+    "name": "الزلزلة",
+    "revelationPlace": "مدنية"
+  },
+  {
+    "number": 100,
+    "pagesTo": 600,
+    "pagesFrom": 599,
+    "versesCount": 11,
+    "name": "العاديات",
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 101,
+    "pagesTo": 600,
+    "pagesFrom": 600,
+    "name": "القارعة",
+    "versesCount": 11,
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 102,
+    "pagesTo": 600,
+    "pagesFrom": 600,
+    "versesCount": 8,
+    "name": "التكاثر",
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 103,
+    "pagesTo": 601,
+    "name": "العصر",
+    "pagesFrom": 601,
+    "versesCount": 3,
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 104,
+    "pagesTo": 601,
+    "pagesFrom": 601,
+    "name": "الهمزة",
+    "versesCount": 9,
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 105,
+    "pagesTo": 601,
+    "name": "الفيل",
+    "pagesFrom": 601,
+    "versesCount": 5,
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 106,
+    "pagesTo": 602,
+    "name": "قريش",
+    "pagesFrom": 602,
+    "versesCount": 4,
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 107,
+    "pagesTo": 602,
+    "pagesFrom": 602,
+    "versesCount": 7,
+    "name": "الماعون",
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 108,
+    "pagesTo": 602,
+    "pagesFrom": 602,
+    "versesCount": 3,
+    "name": "الكوثر",
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 109,
+    "pagesTo": 603,
+    "pagesFrom": 603,
+    "versesCount": 6,
+    "name": "الكافرون",
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 110,
+    "pagesTo": 603,
+    "name": "النصر",
+    "pagesFrom": 603,
+    "versesCount": 3,
+    "revelationPlace": "مدنية"
+  },
+  {
+    "number": 111,
+    "pagesTo": 603,
+    "name": "المسد",
+    "pagesFrom": 603,
+    "versesCount": 5,
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 112,
+    "pagesTo": 604,
+    "name": "الإخلاص",
+    "pagesFrom": 604,
+    "versesCount": 4,
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 113,
+    "pagesTo": 604,
+    "name": "الفلق",
+    "pagesFrom": 604,
+    "versesCount": 5,
+    "revelationPlace": "مكية"
+  },
+  {
+    "number": 114,
+    "pagesTo": 604,
+    "name": "الناس",
+    "pagesFrom": 604,
+    "versesCount": 6,
+    "revelationPlace": "مكية"
+  }
+]

@@ -1,16 +1,24 @@
 import 'dart:convert';
 
 import 'package:path/path.dart';
-import 'package:siraj/data/models/azkar_model.dart';
-import 'package:siraj/data/models/zekr_model.dart';
+import 'package:siraj/core/shared/models/azkar_model.dart';
+import 'package:siraj/core/shared/models/zekr_model.dart';
 import 'package:sqflite/sqflite.dart';
 
 class LocalDatabaseServices {
+  LocalDatabaseServices._();
+
   static Database? _db;
 
   static const String dbName = "azkar.db";
   static const int dbVersion = 1;
 
+  static const String asrTable = "asrAzkar";
+  static const String fajrTable = "fajrAzkar";
+  static const String ishaTable = "ishaAzkar";
+  static const String dhuhrTable = "dhuhrAzkar";
+  static const String sunriseTable = "sunriseAzkar";
+  static const String maghribTable = "maghribAzkar";
   static const String morningTable = "morningAzkar";
   static const String eveningTable = "eveningAzkar";
   static const String wakingUpTable = "wakingUpAzkar";
@@ -30,9 +38,15 @@ class LocalDatabaseServices {
       path,
       version: dbVersion,
       onCreate: (db, version) async {
-        await _createTable(db, wakingUpTable);
+        await _createTable(db, asrTable);
+        await _createTable(db, fajrTable);
+        await _createTable(db, ishaTable);
+        await _createTable(db, dhuhrTable);
+        await _createTable(db, sunriseTable);
+        await _createTable(db, maghribTable);
         await _createTable(db, morningTable);
         await _createTable(db, eveningTable);
+        await _createTable(db, wakingUpTable);
         await _createTable(db, sleepingTable);
       },
     );
